@@ -23,9 +23,12 @@ class Position{
 }
 
 class ProgramWindow{
-    screenSize = Size(800, 600)
+    screenSize = new Size(800, 600)
     constructor(size = Size, position = Position){
         this.size = size;
         this.position = position;
     }
 }
+
+let testObj = new ProgramWindow(new Size(50, 60), new Position());
+console.log(testObj.size.width);
