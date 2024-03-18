@@ -24,7 +24,7 @@ class Position{
 
 class ProgramWindow{
     screenSize = new Size(800, 600)
-    constructor(size = Size, position = Position){
+    constructor(size = new Size(200, 100), position = new Position()){
         this.size = size;
         this.position = position;
     }
