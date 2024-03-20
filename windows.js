@@ -23,10 +23,10 @@ class Size {
   }
   
   class ProgramWindow {
+    screenSize = new Size(800, 600)
     constructor(size = new Size(200, 100), position = new Position()) {
         this.size = size;
         this.position = position;
-        this.screenSize = new Size(800, 600); // Inicializar screenSize en el constructor
     }
   
     resize(newSize) {
@@ -70,9 +70,3 @@ class Size {
   console.log("Después del cambio:");
   console.log(testObj);
   
-  const size = new Size(1080,764);
-  size.width;
-  size.height;
-  size.resize(1090,1080);
-  size.width;
-  size.height;
