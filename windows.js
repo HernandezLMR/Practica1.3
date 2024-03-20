@@ -55,18 +55,28 @@ class Size {
   }
   
   function changeWindow(windowInstance, newSize, newPosition) {
-    windowInstance.resize(newSize);
-    windowInstance.move(newPosition);
-    return windowInstance;
+    try{
+        windowInstance.resize(newSize);
+        windowInstance.move(newPosition);
+        return windowInstance;
+    }
+    catch{
+        windowInstance.resize(new Size(400,300));
+        windowInstance.move(new Position(100,150));
+    }
   }
   
   // Crear una instancia de ProgramWindow con los valores especificados
-  let testObj = new ProgramWindow();
+  /*let testObj = new ProgramWindow();
   console.log("Antes del cambio:");
   console.log(testObj);
   
   // Cambiar la ventana a una anchura de 400, altura de 300, y posición en x = 100, y = 150
   testObj = changeWindow(testObj, new Size(400, 300), new Position(100, 150));
   console.log("Después del cambio:");
-  console.log(testObj);
+  console.log(testObj);*/
   
+  const programWindow = new ProgramWindow();
+  changeWindow(programWindow);
+
+  console.log(programWindow.size.width);
